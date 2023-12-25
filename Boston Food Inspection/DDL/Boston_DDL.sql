@@ -1,4 +1,4 @@
-
+--# DDL
 
 CREATE DATABASE `boston_final`;
 
