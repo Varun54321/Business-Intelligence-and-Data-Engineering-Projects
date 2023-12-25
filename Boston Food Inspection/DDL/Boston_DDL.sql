@@ -1,9 +1,4 @@
 
--- ER/Studio Data Architect SQL Code Generation
--- Project :      Boston_Final.DM1
---
--- Date Created : Saturday, February 26, 2022 23:14:35
--- Target DBMS : MySQL 8.x
 
 CREATE DATABASE `boston_final`;
 
