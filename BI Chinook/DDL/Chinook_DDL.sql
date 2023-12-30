@@ -2,7 +2,7 @@
 
 
 CREATE TABLE Dim_Album(
-    AlbumSK             char(10)    NOT NULL,
+    AlbumSK             char(10) PRIMARY KEY   NOT NULL,
     Albumid             char(10)    NULL,
     AlbumTitle          char(10)    NULL,
     SOR_ID              char(10)    NULL,
@@ -12,24 +12,17 @@ CREATE TABLE Dim_Album(
     DI_Create_Date      char(10)    NULL,
     DI_Modified_Date    char(10)    NULL,
     ArtistSK            char(10)    NOT NULL,
-    CONSTRAINT PK20 PRIMARY KEY NONCLUSTERED (AlbumSK)
+   
 )
 
-go
 
-
-IF OBJECT_ID('Dim_Album') IS NOT NULL
-    PRINT '<<< CREATED TABLE Dim_Album >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE Dim_Album >>>'
-go
 
 /* 
  * TABLE: Dim_Artist 
  */
 
 CREATE TABLE Dim_Artist(
-    ArtistSK            char(10)    NOT NULL,
+    ArtistSK            char(10) PRIMARY KEY   NOT NULL,
     Artistid            char(10)    NULL,
     ArtistName          char(10)    NULL,
     SOR_ID              char(10)    NULL,
@@ -38,24 +31,16 @@ CREATE TABLE Dim_Artist(
     DI_Job_ID           char(10)    NULL,
     DI_Create_ID        char(10)    NULL,
     DI_Modified_Date    char(10)    NULL,
-    CONSTRAINT PK19 PRIMARY KEY NONCLUSTERED (ArtistSK)
+    
 )
 
-go
-
-
-IF OBJECT_ID('Dim_Artist') IS NOT NULL
-    PRINT '<<< CREATED TABLE Dim_Artist >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE Dim_Artist >>>'
-go
 
 /* 
  * TABLE: Dim_Composer 
  */
 
 CREATE TABLE Dim_Composer(
-    ComposerSK         char(10)    NOT NULL,
+    ComposerSK         char(10) PRIMARY KEY   NOT NULL,
     ComposerName       char(10)    NULL,
     SOR_ID             char(10)    NULL,
     SOR_LoadDate       char(10)    NULL,
@@ -63,24 +48,17 @@ CREATE TABLE Dim_Composer(
     DI_Job_ID          char(10)    NULL,
     DI_Create_Date     char(10)    NULL,
     DI_ModifiedDate    char(10)    NULL,
-    CONSTRAINT PK15 PRIMARY KEY NONCLUSTERED (ComposerSK)
+   
 )
 
-go
 
-
-IF OBJECT_ID('Dim_Composer') IS NOT NULL
-    PRINT '<<< CREATED TABLE Dim_Composer >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE Dim_Composer >>>'
-go
 
 /* 
  * TABLE: Dim_Customer 
  */
 
 CREATE TABLE Dim_Customer(
-    CustomerSK            char(10)    NOT NULL,
+    CustomerSK            char(10) PRIMARY KEY   NOT NULL,
     Customerid            char(10)    NULL,
     FirstName             char(10)    NULL,
     LastName              char(10)    NULL,
@@ -98,24 +76,17 @@ CREATE TABLE Dim_Customer(
     DI_Modified_Date      char(10)    NULL,
     CustomerGeoSK         char(10)    NOT NULL,
     EmployeeSK            char(10)    NULL,
-    CONSTRAINT PK32 PRIMARY KEY NONCLUSTERED (CustomerSK)
+    
 )
 
-go
 
-
-IF OBJECT_ID('Dim_Customer') IS NOT NULL
-    PRINT '<<< CREATED TABLE Dim_Customer >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE Dim_Customer >>>'
-go
 
 /* 
  * TABLE: Dim_Date 
  */
 
 CREATE TABLE Dim_Date(
-    DateSK               char(10)    NOT NULL,
+    DateSK               char(10) PRIMARY KEY   NOT NULL,
     FullDateAK           char(10)    NULL,
     DayNumberOfWeek      char(10)    NULL,
     DayNameOfWeek        char(10)    NULL,
@@ -132,24 +103,17 @@ CREATE TABLE Dim_Date(
     DI_Job_ID            char(10)    NULL,
     DI_Create_Date       char(10)    NULL,
     DI_Modified_Date     char(10)    NULL,
-    CONSTRAINT PK26 PRIMARY KEY NONCLUSTERED (DateSK)
+ 
 )
 
-go
 
-
-IF OBJECT_ID('Dim_Date') IS NOT NULL
-    PRINT '<<< CREATED TABLE Dim_Date >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE Dim_Date >>>'
-go
 
 /* 
  * TABLE: Dim_Employee 
  */
 
 CREATE TABLE Dim_Employee(
-    EmployeeSK            char(10)    NOT NULL,
+    EmployeeSK            char(10) PRIMARY KEY   NOT NULL,
     ReportsToSK           char(10)    NULL,
     LastName              char(10)    NULL,
     FirstName             char(10)    NULL,
@@ -171,17 +135,13 @@ CREATE TABLE Dim_Employee(
     EmployeeGeoSK         char(10)    NULL,
     BirthDateSK           char(10)    NULL,
     HireDateSK            char(10)    NULL,
-    CONSTRAINT PK30 PRIMARY KEY NONCLUSTERED (EmployeeSK)
+    
 )
 
-go
 
 
-IF OBJECT_ID('Dim_Employee') IS NOT NULL
-    PRINT '<<< CREATED TABLE Dim_Employee >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE Dim_Employee >>>'
-go
+
+
 
 /* 
  * TABLE: Dim_Genre 
@@ -200,21 +160,13 @@ CREATE TABLE Dim_Genre(
     CONSTRAINT PK16 PRIMARY KEY NONCLUSTERED (GenreSK)
 )
 
-go
-
-
-IF OBJECT_ID('Dim_Genre') IS NOT NULL
-    PRINT '<<< CREATED TABLE Dim_Genre >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE Dim_Genre >>>'
-go
 
 /* 
  * TABLE: Dim_Geography 
  */
 
 CREATE TABLE Dim_Geography(
-    GeoSK               char(10)    NOT NULL,
+    GeoSK               char(10)  PRIMARY KEY  NOT NULL,
     City                char(10)    NULL,
     State               char(10)    NULL,
     Country             char(10)    NULL,
@@ -224,24 +176,17 @@ CREATE TABLE Dim_Geography(
     DI_Job_ID           char(10)    NULL,
     DI_Create_Date      char(10)    NULL,
     DI_Modified_Date    char(10)    NULL,
-    CONSTRAINT PK22 PRIMARY KEY NONCLUSTERED (GeoSK)
+   
 )
 
-go
 
-
-IF OBJECT_ID('Dim_Geography') IS NOT NULL
-    PRINT '<<< CREATED TABLE Dim_Geography >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE Dim_Geography >>>'
-go
 
 /* 
  * TABLE: Dim_MediaType 
  */
 
 CREATE TABLE Dim_MediaType(
-    MediaTypeSK         char(10)    NOT NULL,
+    MediaTypeSK         char(10) PRIMARY KEY   NOT NULL,
     MediaTypeid         char(10)    NULL,
     MeidaTypeName       char(10)    NULL,
     SOR_ID              char(10)    NULL,
@@ -250,24 +195,17 @@ CREATE TABLE Dim_MediaType(
     DI_Job_ID           char(10)    NULL,
     DI_Create_Date      char(10)    NULL,
     DI_Modified_Date    char(10)    NULL,
-    CONSTRAINT PK21 PRIMARY KEY NONCLUSTERED (MediaTypeSK)
+ 
 )
 
-go
 
-
-IF OBJECT_ID('Dim_MediaType') IS NOT NULL
-    PRINT '<<< CREATED TABLE Dim_MediaType >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE Dim_MediaType >>>'
-go
 
 /* 
  * TABLE: Dim_Playlist 
  */
 
 CREATE TABLE Dim_Playlist(
-    PlaylistSK          char(10)    NOT NULL,
+    PlaylistSK          char(10) PRIMARY KEY   NOT NULL,
     Playlistid          char(10)    NULL,
     PlaylistName        char(10)    NULL,
     SOR_ID              char(10)    NULL,
@@ -277,17 +215,10 @@ CREATE TABLE Dim_Playlist(
     DI_Create_Date      char(10)    NULL,
     DI_Modified_Date    char(10)    NULL,
     SongSK              char(10)    NOT NULL,
-    CONSTRAINT PK18 PRIMARY KEY NONCLUSTERED (PlaylistSK)
+   
 )
 
-go
 
-
-IF OBJECT_ID('Dim_Playlist') IS NOT NULL
-    PRINT '<<< CREATED TABLE Dim_Playlist >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE Dim_Playlist >>>'
-go
 
 /* 
  * TABLE: Dim_PlaylistTrack 
@@ -302,7 +233,7 @@ CREATE TABLE Dim_PlaylistTrack(
     DI_Job_ID           char(10)    NULL,
     DI_Create_Date      char(10)    NULL,
     DI_Modified_Date    char(10)    NULL,
-    CONSTRAINT PK17 PRIMARY KEY NONCLUSTERED (SongSK, PlaylistSK)
+     PRIMARY KEY  (SongSK, PlaylistSK)
 )
 
 go
@@ -319,7 +250,7 @@ go
  */
 
 CREATE TABLE Dim_Song(
-    SongSK              char(10)    NOT NULL,
+    SongSK              char(10)  primary key  NOT NULL,
     SOR_UpdateDate      char(10)    NULL,
     DI_Job_ID           char(10)    NULL,
     DI_Create_Date      char(10)    NULL,
@@ -336,7 +267,7 @@ CREATE TABLE Dim_Song(
     ArtistSK            char(10)    NOT NULL,
     AlbumSK             char(10)    NULL,
     MediaTypeSK         char(10)    NOT NULL,
-    CONSTRAINT PK12 PRIMARY KEY NONCLUSTERED (SongSK)
+
 )
 
 go
@@ -353,7 +284,7 @@ go
  */
 
 CREATE TABLE FactSales(
-    SalesSK              char(10)    NOT NULL,
+    SalesSK              char(10) primary key   NOT NULL,
     SalesAmount          char(10)    NULL,
     InvoiceLineid        char(10)    NULL,
     Invoiceid            char(10)    NULL,
@@ -371,17 +302,9 @@ CREATE TABLE FactSales(
     BillingGeoSK         char(10)    NOT NULL,
     CustomerSK           char(10)    NOT NULL,
     DateSK               char(10)    NOT NULL,
-    CONSTRAINT PK33 PRIMARY KEY NONCLUSTERED (SalesSK)
+  
 )
 
-go
-
-
-IF OBJECT_ID('FactSales') IS NOT NULL
-    PRINT '<<< CREATED TABLE FactSales >>>'
-ELSE
-    PRINT '<<< FAILED CREATING TABLE FactSales >>>'
-go
 
 /* 
  * TABLE: Dim_Album 
