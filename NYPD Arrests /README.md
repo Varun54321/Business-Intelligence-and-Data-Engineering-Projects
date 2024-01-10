@@ -6,5 +6,5 @@ This data offers transparency into police activity and can be used for public ex
 TASK : <br>
 1.) Design & create  Dimensional Model (Using ER Studio)<br>
 2.) Create DDL for the above Dimension model<br>
-3.) Load  Dimension Tables on MySQL using (Alteryx Plateform) Data pipeline tool<br>
+3.) Load Stage Table and Dimension Tables on SQL Server using (Talend Plateform) Data pipeline tool. Load Stage Table and Dimension Tables on My SQL using (Alteryx Platform) Data Pipeline tool<br>
 4.) Table Row Counts of all Dimenions from My SQL
