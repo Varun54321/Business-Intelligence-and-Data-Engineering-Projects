@@ -1,5 +1,5 @@
 # Chinook
-The Chinook data model represents a digital media store, including tables for artists, albums, media tracks, invoices, and customers.
+The Chinook data model represents a digital media store for selling music tapes, including tables for artists, albums, media tracks, invoices, and customers.
 
 ## TASK : 
 
